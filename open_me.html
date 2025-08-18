@@ -1,0 +1,138 @@
+<!--
+    © 2025 Ferlaty
+    Modification allowed for personal use only.
+    Redistribution of the original file is prohibited.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" content="user-scalable=no">
+    <link rel="icon" type="image/png" href="ico.png">
+    <title>WARNING!!! ACCESS GAINED!!!</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00; 
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            padding: 0px;
+            margin: 0;
+            overflow: hidden;
+        }
+        #output {
+            white-space: pre; 
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        
+        const text = `C:\\Users\\You> dir /s
+
+ Volume in drive C has no label.
+ Volume Serial Number is 4F3C-9B2A
+
+ Directory of C:\\Projects
+
+01/12/2025  10:42 AM    <DIR>          .
+01/12/2025  10:42 AM    <DIR>          ..
+10/08/2024  03:15 PM    <DIR>          src
+11/05/2024  07:27 PM    <DIR>          assets
+12/19/2024  09:53 AM    <DIR>          docs
+01/02/2025  01:17 PM             4,312 README.md
+01/09/2025  04:28 PM            12,845 changelog.txt
+               2 File(s)         17,157 bytes
+
+ Directory of C:\\Projects\\src
+
+10/08/2024  03:16 PM    <DIR>          .
+10/08/2024  03:16 PM    <DIR>          ..
+10/10/2024  09:34 AM             2,456 main.c
+10/10/2024  09:35 AM             8,124 utils.c
+10/10/2024  09:35 AM             4,870 utils.h
+10/11/2024  11:03 AM            12,384 engine.c
+10/11/2024  11:04 AM             3,216 engine.h
+11/15/2024  05:22 PM            18,204 parser.c
+11/15/2024  05:22 PM             2,180 parser.h
+01/14/2025  08:44 AM             6,421 network.c
+01/14/2025  08:44 AM             3,598 network.h
+               9 File(s)         63,233 bytes
+
+ Directory of C:\\Projects\\assets
+
+11/05/2024  07:27 PM    <DIR>          .
+11/05/2024  07:27 PM    <DIR>          ..
+11/06/2024  10:51 AM           253,764 logo.png
+11/06/2024  10:52 AM           842,312 background.jpg
+11/06/2024  10:54 AM           118,904 icon.ico
+11/07/2024  03:12 PM           426,872 splash.bmp
+01/14/2025  09:00 AM           512,128 banner.psd
+01/14/2025  09:01 AM           245,768 avatar.png
+               6 File(s)      2,399,748 bytes
+
+ Directory of C:\\Projects\\docs
+
+12/19/2024  09:53 AM    <DIR>          .
+12/19/2024  09:53 AM    <DIR>          ..
+12/20/2024  02:12 PM            25,784 manual.pdf
+12/20/2024  02:14 PM             7,856 install.txt
+12/20/2024  02:15 PM             4,215 license.txt
+12/21/2024  11:33 AM           152,984 datasheet.pdf
+01/14/2025  09:05 AM           534,112 project_plan.pdf
+               5 File(s)        724,951 bytes
+
+ Directory of C:\\Windows\\System32
+
+04/12/2023  09:34 AM         2,153,472 kernel32.dll
+04/12/2023  09:34 AM         1,452,032 user32.dll
+04/12/2023  09:34 AM         3,621,376 gdi32.dll
+04/12/2023  09:34 AM           457,728 advapi32.dll
+04/12/2023  09:34 AM           726,528 shell32.dll
+               5 File(s)      8,411,136 bytes
+
+ Directory of C:\\Secret\\Logs
+
+01/13/2025  03:14 AM    <DIR>          .
+01/13/2025  03:14 AM    <DIR>          ..
+01/13/2025  03:15 AM         1,284,320 access_log_2025_01.txt
+01/13/2025  03:15 AM         3,542,198 passwords_backup.zip
+01/13/2025  03:15 AM            874,234 hidden_notes.txt
+01/13/2025  03:15 AM           924,584 system_dump.bin
+               4 File(s)      6,625,336 bytes
+
+     Total Files Listed:
+              31 File(s)     18,241,561 bytes
+              13 Dir(s)  42,913,304,576 bytes free
+`;
+
+        let i = 0;
+        const speed = 0.01;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("output").textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                setTimeout(() => {
+                    i = 0;
+                    document.getElementById("output").textContent = ""; 
+                    typeWriter();
+                }, 2000); 
+                setTimeout(() => {
+                    alert("Unauthorized access detected!");
+                    alert("You have been pranked!😂")
+                    
+                    
+                    i = 0;
+                    document.getElementById("output").textContent = "";
+                    typeWriter();
+                }, 1000);
+            }
+        }
+        typeWriter();
+    </script>
+</body>
+</html>
